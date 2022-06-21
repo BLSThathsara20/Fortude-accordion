@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      .slider {
+        width: 100vw;
+        height: 60vh;
+        margin: 0;
+        display: flex;
+        overflow: hidden;
+      }
+
+      .slide {
+        min-width: 60px;
+        flex: 1 1;
+        transition-property: flex-grow, color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        padding: 1em;
+        position: relative;
+        color: rgb(255, 255, 255);
+      }
+
+      .slide--expanded {
+        flex: 20 1;
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+        background-image: url('/1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .slide{
+        background-color: #1177e3;
+        --color-text: white;
+      }
+
+      .slide:nth-of-type(1) {
+        background-color: #241023;
+        --color-text: white;
+      }
+
+      .slide:nth-of-type(2) {
+        background-color: #6b0504;
+        --color-text: white;
+      }
+
+      .slide:nth-of-type(3) {
+        background-color: #a3320b;
+        --color-text: white;
+      }
+
+      .slide:nth-of-type(4) {
+        background-color: #d5e68d;
+        --color-text: black;
+      }
+
+      .slide:nth-of-type(5) {
+        background-color: #47a025;
+        --color-text: white;
+      }
+      .slide:last-child {
+        background-color: #2d37eb;
+        --color-text: white;
+        min-width: 20%;
+      }
+
+      .slide:first-child {
+        background-color: #24292E;
+        --color-text: white;
+        min-width: 20%;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .slide .slide-titile{
+        font-weight: bold;
+        font-size: 36px;
+        position: absolute;
+        right: 0;
+        bottom: 100px;
+        z-index: 100;
+        transform: rotate(-90deg);
+      }
+
+      .slide .slide-titile i{
+        padding-right: 8px;
+      }
+
+      .slide--expanded .slide-titile{
+        transform: rotate(0deg);
+        position: absolute;
+        left: 200px;
+        bottom: 150px;
+      }
+
+      .slide--expanded .slide-titile i{
+        display: none;
+      }
+
+      .slide .slide-body-content{
+        display: none;
+      }
+
+      .slide--expanded .slide-body-content{
+        display: block;
+        font-size: 20px;
+        position: absolute;
+        bottom: 90px;
+        left: 200px;
+      }
+
+      .slide--expanded .slide-body-content a{
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .slide--expanded .slide-body-content a i{
+        padding-right: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+        <div class="slide slide--expanded" onmouseover="expand(this)">
+            <div class="slide-titile"><i class="ri-arrow-up-line"></i>hi1</div>
+            <div class="slide-body-content">
+                <p>body</p>
+                <a href="#"><i class="ri-arrow-right-up-line"></i>Read More</a>
+            </div>
+        </div>
+        <div class="slide" onmouseover="expand(this)">
+            <div class="slide-titile">hi2</div>
+            <div class="slide-body-content">body2</div>
+        </div>
+        <div class="slide" onmouseover="expand(this)">
+            <div class="slide-titile">hi3</div>
+            <div class="slide-body-content">body3</div>
+        </div>
+        <div class="slide" onmouseover="expand(this)">
+            <div class="slide-titile">hi4</div>
+            <div class="slide-body-content">body4</div>
+        </div>
+        <div class="slide" onmouseover="expand(this)">
+            <div class="slide-titile">hi</div>
+            <div class="slide-body-content">body5</div>
+        </div>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>
