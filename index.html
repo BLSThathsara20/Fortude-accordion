@@ -29,6 +29,7 @@
         padding: 1em;
         position: relative;
         color: rgb(255, 255, 255);
+        transition: all 0.8s ease; 
       }
 
       .slide--expanded {
@@ -41,6 +42,14 @@
         background-size: cover;
       }
 
+      .slide--expanded span{
+        font-size: 14px;
+        position: absolute;
+        left: 200px;
+        letter-spacing: 1.5px;
+        display: inline-block;
+      }
+
       .slide{
         background-color: #1177e3;
         --color-text: white;
@@ -48,31 +57,26 @@
       }
 
       .slide:nth-of-type(1) {
-        background-color: #241023;
+        background-color: #2B362D;
         --color-text: white;
       }
 
       .slide:nth-of-type(2) {
-        background-color: #6b0504;
+        background-color: #24292E;
         --color-text: white;
       }
 
       .slide:nth-of-type(3) {
-        background-color: #a3320b;
+        background-color: #123A66;
         --color-text: white;
-      }
-
-      .slide:nth-of-type(4) {
-        background-color: #d5e68d;
-        --color-text: black;
       }
 
       .slide:nth-of-type(5) {
-        background-color: #47a025;
+        background-color: #1f8ded;
         --color-text: white;
       }
       .slide:last-child {
-        background-color: #2d37eb;
+        background-color: #2EBFF3;
         --color-text: white;
         min-width: 20%;
       }
@@ -80,7 +84,7 @@
       .slide:first-child {
         background-color: #24292E;
         --color-text: white;
-        min-width: 20%;
+        min-width: 25%;
       }
 
       * {
@@ -97,6 +101,7 @@
         bottom: 100px;
         z-index: 100;
         transform: rotate(-90deg);
+        transition: transform .6s ease-in-out;
       }
 
       .slide .slide-titile i{
@@ -141,6 +146,7 @@
     <div class="slider">
         <div class="slide slide--expanded" onmouseover="expand(this)">
             <div class="slide-titile"><i class="ri-arrow-up-line"></i>hi1</div>
+            <!-- <span>INDUSTRIES</span> -->
             <div class="slide-body-content">
                 <p>body</p>
                 <a href="#"><i class="ri-arrow-right-up-line"></i>Read More</a>
